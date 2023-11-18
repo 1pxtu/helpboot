@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Wagner Cesar Vieira">
+    <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0, shrink-to-fit=no">
+    <title>Agenda CRUD</title>
+
+    <!-- Google Fonts - Monstserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="css/illegal.css">
+</head>
+
+<body>
+    <header>
+        <!-- Construção da barra de navegação -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-cor-menu">
+            <section class="container py-3">
+                <a href="" class="navbar-brand">
+                    <img src="images/timetable.png" width="40rem" alt="Sumiu" class="img-fluid">
+                    <span>Agenda CRUD</span>
+                </a>
+
+                <!-- Definição do botão do menu hamburguer -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                    aria-current="navbar" aria-controls="navbar-items" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-menu-button-wide"></i>
+                </button>
+
+                <!-- Definindo os itens do menu -->
+                <section class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#cards-container" class="nav-link">Operações</a></li>
+                        <li class="nav-item"><a href="#footer" class="nav-link">Contato</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!--Inicio do slider-->
+        <section class="container" id="slider-container">
+
+            <section class="carousel slide" id="slider" data-bs-ride="carousel" data-bs-interval='5000'>
+
+                <section class="carousel-indicators">
+
+                    <button type='button' class="active" data-bs-target="#slider" data-bs-slide-to="0"
+                        aria-current="true" aria-label="Slide 1"></button>
+
+                    <button type='button' data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                    <button type='button' data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                    <button type='button' data-bs-target="#slider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+                </section>
+
+                <section class="carousel-inner">
+
+                    <section class="carousel-item active">
+                        <img src="./images/a.jpg" alt="" class="d-block w-100">
+                        <section class="carousel-caption d-none d-md-block">
+                        <a href="#" class="btn btn-danger">
+                                <h4>Clique aqui</h4>
+                        </a>
+                        </section>
+                    </section>
+
+                    <section class="carousel-item">
+                        <img src="./images/b.jpg" alt="" class="d-block w-100">
+                        <section class="carousel-caption d-none d-md-block">
+                        <a href="#" class="btn btn-danger">
+                            <h4>Clique aqui</h4>
+                        </a>
+                        </section>
+                    </section>
+
+                    <section class="carousel-item">
+                        <img src="./images/c.jpg" alt="" class="d-block w-100">
+                        <section class="carousel-caption d-none d-md-block">
+                        <a href="#" class="btn btn-danger">
+                            <h4>Clique aqui</h4>
+                        </a>
+                        </section>
+                    </section>
+
+                    <section class="carousel-item">
+                        <img src="./images/d.jpg" alt="" class="d-block w-100">
+                        <section class="carousel-caption d-none d-md-block">
+                        <a href="#" class="btn btn-danger">
+                            <h4>Clique aqui</h4>
+                        </a>
+                        </section>
+                    </section>
+
+                </section>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </section>
+            <!--Fim do Slider-->
+
+            <!--Inicio do banner-->
+            <section class="container" id="cards-container">
+
+                <section class="row g-3">
+
+                    <section class="col-sm-6 mb-2 mb-sm-0">
+                        <section class="card">
+                            <section class="card-body">
+                                <h5 class="card-title"><strong>A primeira operação do CRUD.</strong></h5>
+                                <p class="card-text">Trata-se do conceito de criação, registro ou cadastro de
+                                    informações e
+                                    dados em um determinado lugar. Sendo assim, pode se referir à criação de dados de
+                                    uma tabela,
+                                    ao registro do usuário numa plataforma.</p>
+                                <section class="col">
+                                    <button type="button" class="btn btn-success col-md-3 me-3" data-bs-toggle="modal"
+                                        data-bs-target="#modalCreate">Cadastrar
+                                    </button>
+                                    <a href="#modalCreate" class="btn btn-outline-success col-md-4 me-3"
+                                        data-bs-toggle="modal">Incluir</a>
+                                    <a href="" class="btn btn-primary col-md-3">Adicionar</a>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6">
+                        <section class="card">
+                            <section class="card-body">
+                                <h5 class="card-title"><strong>A segunda operação do CRUD.</strong></h5>
+                                <p class="card-text">É o ato de consultar os dados em um website. Quando você clica no
+                                    botão
+                                    de ver vagas em uma plataforma de empregos, por exemplo, você está solicitando dados
+                                    que serão lidos pela plataforma e, na sequência, exibidos na
+                                    tela.</p>
+                                <section class="col mx-auto">
+                                    <button type="button" class="btn btn-primary col-md-3 me-3" data-bs-toggle="modal"
+                                        data-bs-target="#modalView">Listar
+                                    </button>
+                                    <a href="" class="btn btn-outline-primary col-md-4 me-3" data-bs-toggle="modal"
+                                        data-bs-target="#modalView">Exibir</a>
+                                    <a href="" class="btn btn-primary col-md-3">Visualizar</a>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6">
+                        <section class="card">
+                            <section class="card-body">
+                                <h5 class="card-title"><strong>A terceira operação do CRUD.</strong></h5>
+                                <p class="card-text">O conceito de update é aplicado quando você, que é dono dos dados
+                                    ou
+                                    tem permissão para editá-los, atualiza as informações que julgar necessárias. O
+                                    diferencial
+                                    com relação aos outros processos é a limitação de uso, que é voltada para quem criou
+                                    os dados
+                                    na tabela ou aplicação, bem como por quem tem a permissão do sistema.</p>
+                                <section class="col mx-auto">
+                                    <a href="" class="btn btn-warning col-md-3 me-3">Atualizar</a>
+                                    <a href="" class="btn btn-outline-warning col-md-4 me-3">Alterar</a>
+                                    <a href="#" class="btn btn-primary col-md-3">Modificar</a>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6">
+                        <section class="card">
+                            <section class="card-body">
+                                <h5 class="card-title"><strong>A quarta operação do CRUD.</strong></h5>
+                                <p class="card-text">Trata-se de uma ação de remoção de dados a partir do operador do
+                                    sistema. Portanto, assim como o Update, tem algumas limitações. Ao pedir
+                                    a exclusão do seu nome da lista de e-mail marketing de uma empresa, por exemplo,
+                                    você
+                                    precisa da intermediação do operador que vai permitir a deleção de dados, ou seja,
+                                    não pode
+                                    fazer isso diretamente.</p>
+                                <section class="row g-2">
+                                    <a href="" class="btn btn-danger col-md-3 me-3">Excluir</a>
+                                    <a href="" class="btn btn-outline-danger col-md-4 me-3">Apagar</a>
+                                    <a href="#" class="btn btn-primary col-md-3 me-3">Deletar</a>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+    </main>
+
+    <!--Começo Footer-->
+    <footer class="container-fluid bg-black" id="footer">
+        <section class="container">
+            <section class="row">
+                <!-- FOOTER TOP -->
+                <section class="col-12" id="footer-top">
+                    <section class="row justify-content-between">
+                        <section class="col-4">
+                            <h2>Agenda Crud</h2>
+                        </section>
+                        <section class="col-4" id="social-icons">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-youtube"></i>
+                            <i class="bi bi-twitter"></i>
+                        </section>
+                    </section>
+                </section>
+
+                <!-- FOOTER DETAILS -->
+                <section class="col-12" id="footer-details">
+                    <section class="row">
+                        <section class="col-12 col-md-4" id="news-container">
+                            <h5>Fique por dentro das novidades</h5>
+                            <p class="secondary-color">
+                                Inscreva-se para saber em primeira mão
+                            </p>
+                            <form>
+                                <section class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Digite o seu e-mail" />
+                                </section>
+                                <button class="btn btn-dark">Inscrever</button>
+                            </form>
+                        </section>
+                        <section class="col-12 col-md-3" id="contact-container">
+                            <h5>Formas de contato</h5>
+                            <p class="secondary-color">(17) 3343-9695</p>
+                            <p class="secondary-color">agendacrud@gmail.com</p>
+                        </section>
+                        <section class="col-12 col-md-5" id="links-container">
+                            <embed type="text/html"
+                                src="data:image/jpeg;base64,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"
+                                width="450" height="184" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" frameboard="0"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+        </section>
+    </footer>
+
+    <!--Área do Modal-->
+    <section class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="modalCreate" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-centered modal-lg">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Inserir</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col form-item">
+                                <label for="inputCPF">CPF</label>
+                                <input type="text" class="form-control" id="inputCPF" placeholder="CPF">
+                            </div>
+                            <div class="col-6 form-item">
+                                <label for="inputEmail4">Nome</label>
+                                <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+                            </div>
+                            <div class="col form-item">
+                                <label for="inputRG">RG</label>
+                                <input type="text" class="form-control" id="inputRG" placeholder="RG">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-item">
+                                <label for="inputBirth">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="inputBirth">
+                            </div>
+                            <div class="col-6 form-item">
+                                <label for="inputEndereço">Endereço</label>
+                                <input type="text" class="form-control" id="inputEndereço" placeholder="Rua dos Bobos, nº 0">
+                            </div>
+                            <div class="col form-item">
+                                <label for="inputBairro">Bairro</label>
+                                <input type="text" class="form-control" id="inputBairro" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-item">
+                                <label for="inputCEP">CEP</label>
+                                <input type="text" class="form-control" id="inputCEP">
+                            </div>
+                            <div class="col form-item">
+                                <label for="inputCity">Cidade</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col form-item">
+                                <label for="inputEstado">Estado</label>
+                                <select id="inputEstado" class="form-control">
+                                    <option selected>Escolher...</option>
+                                    <option>São Paulo</option>
+                                    <option>Rio de Janeiro</option>
+                                    <option>Espirito Santo</option>
+                                    <option>Minas Gerais</option>
+                                </select>
+                            </div>
+                            <div class="col form-item">
+                                <label for="inputTel">Telefone</label>
+                                <input type="tel" class="form-control" id="inputTel">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-item">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control" id="inputEmail">
+                            </div>
+                            <div class="col form-item">
+                                <label for="inputEmail">Foto</label>
+                                <input type="file" class="form-control" id="inputEmail">
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <section class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Limpar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section class="modal fade" id="modalView" tabindex="-1" aria-labelledby="modalViewLabel" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-centered">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ler Bazinga</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam iusto sequi perferendis
+                    quidem quibusdam possimus ullam facilis veniam tempore debitis.
+                </section>
+                <section class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Bazinga</button>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="modalUpdateLabel" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-centered">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Atualizar Bazinga</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam iusto sequi perferendis
+                    quidem quibusdam possimus ullam facilis veniam tempore debitis.
+                </section>
+                <section class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Bazinga</button>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="modalDeleteLabel" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-centered">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Deletar Bazinga</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam iusto sequi perferendis
+                    quidem quibusdam possimus ullam facilis veniam tempore debitis.
+                </section>
+                <section class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Bazinga</button>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Inclusão das bibliotecas JQuery e JQuery Mask -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <!-- Meu JS -->
+    <script src="js/illegal.js"></script>
+
+
+</body>
+
+</html>
